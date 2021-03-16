@@ -1,4 +1,5 @@
 import collections.CollectionsTasks;
+import collectionsv2.CollectionsTask;
 import enums.EnumTask;
 import files.FilesTask;
 import finalVars.FinalTask;
@@ -9,6 +10,7 @@ import jdbc.TransactionTask;
 import staticVars.StatTask;
 import streams.StreamTask;
 import strings.StringsTask;
+import strings.TruncateString;
 
 import java.io.IOException;
 
@@ -17,6 +19,8 @@ public class Main {
         /* Strings*/
         System.out.println("/* Strings*/");
         StringsTask.start();
+        System.out.println("/* Strings*/");
+        TruncateString.start();
         /* InnerClasses*/
         System.out.println("/* InnerClasses*/");
         InnerClassesTask.start();
@@ -59,6 +63,11 @@ public class Main {
         /* Transaction */
         System.out.println("/* Transaction */");
         TransactionTask.start();
+
+
+        /*Collectionsv2*/
+        System.out.println("/*Collectionsv2*/");
+        CollectionsTask.start();
     }
 }
 
