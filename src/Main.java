@@ -1,4 +1,5 @@
 import collections.CollectionsTasks;
+import collectionsConcurrent.ConcurrentCollectionsTasks;
 import collectionsv2.CollectionsTask;
 import enums.EnumTask;
 import files.FilesTask;
@@ -11,8 +12,11 @@ import staticVars.StatTask;
 import streams.StreamTask;
 import strings.StringsTask;
 import strings.TruncateString;
+import threads.ThreadsTask;
+import threadsV2.ThreadsV2Tasks;
 
 import java.io.IOException;
+import java.util.concurrent.ExecutionException;
 
 public class Main {
     public static void main(String[] args){
@@ -68,6 +72,30 @@ public class Main {
         /*Collectionsv2*/
         System.out.println("/*Collectionsv2*/");
         CollectionsTask.start();
+
+        /*Threads*/
+        System.out.println("/*Threads*/");
+        ThreadsTask.start();
+
+        /*ThreadsV2*/
+        System.out.println("/*ThreadsV2*/");
+        try {
+            ThreadsV2Tasks.start();
+            Thread.sleep(1000);
+        } catch (ExecutionException | InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("==================");
+
+        /*ConcurrentCollections*/
+        System.out.println("/*ConcurrentCollections*/");
+        try {
+            ConcurrentCollectionsTasks.start();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
 

@@ -11,8 +11,8 @@ public class JDBCTask2 {
     public static String URL = "jdbc:postgresql://localhost:5432/";
     public static String DRIVER = "org.postgresql.Driver";
     public static String DB_NAME = "test";
-    public static String USER_NAME = "test";
-    public static String PASSWORD = "test";
+    public static String USER_NAME = "rup";
+    public static String PASSWORD = "rup";
 
     public static void start(){
         Connection connection = null;

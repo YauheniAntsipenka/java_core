@@ -14,7 +14,7 @@ public class TransactionTask {
         PreparedStatement prep3 = null;
 
         try{
-            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/test", "test", "test");
+            conn = DriverManager.getConnection("jdbc:postgresql://localhost:5432/test", "rup", "rup");
             prep1 = conn.prepareStatement("SELECT * FROM Sellers WHERE sex = ?");
             prep1.setString(1, "male");
             ResultSet rs = prep1.executeQuery();
